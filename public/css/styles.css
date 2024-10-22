@@ -1,0 +1,142 @@
+/* Resetting margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Hides the scroll bar */
+  background-color: #000; /* Fallback background color for performance */
+}
+
+/* Full-screen background video styling */
+.bgimg {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.bgimg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+/* Countdown Timer Styling */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.countdown-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #00e6e6;
+}
+
+.countdown-item .label {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+.countdown-item:hover {
+  transform: scale(1.1);
+}
+
+/* Middle section styling */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.middle h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.middle hr {
+  width: 60%;
+  margin: 20px auto;
+  border: 1px solid #00e6e6;
+}
+
+/* Bottom left text */
+.bottomleft {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 600px) {
+  .middle h1 {
+    font-size: 2em;
+  }
+  .countdown-item span {
+    font-size: 2em;
+  }
+}
+
+/* Styling for horizontal rules */
+hr {
+  margin: auto;
+  width: 40%;
+}
