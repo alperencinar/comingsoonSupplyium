@@ -4,6 +4,7 @@
     <meta name="generator" content="Hugo 0.136.2">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Supplyium - Global B2B Trade Marketplace Coming Soon</title>
     
     <!-- SEO and Meta Tags -->
@@ -77,5 +78,22 @@
       ]
     }
     </script>
+
+    <!-- Include the JavaScript to handle mouse effects for mobile (disable on mobile if needed) -->
+    <script>
+    if (window.innerWidth > 600) {
+      // Enable the mouse effect only for non-mobile screens
+      document.querySelectorAll('.floating-element').forEach(function(element) {
+        document.addEventListener('mousemove', function(e) {
+          var speed = element.getAttribute('data-speed');
+          var x = (window.innerWidth - e.pageX * speed) / 100;
+          var y = (window.innerHeight - e.pageY * speed) / 100;
+
+          element.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        });
+      });
+    }
+    </script>
+
 </body>
 </html>

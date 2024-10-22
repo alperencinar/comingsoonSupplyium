@@ -163,6 +163,11 @@ body, html {
   .countdown-item span {
     font-size: 2em;
   }
+
+  /* Hide floating elements on small screens */
+  .floating-element {
+    display: none;
+  }
 }
 
 /* Styling for horizontal rules */
